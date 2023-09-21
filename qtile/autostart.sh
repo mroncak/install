@@ -13,7 +13,7 @@
 #xrandr --rate 120
 
 # For Virtual Machine 
-# xrandr --outout Virtual-1 --mode 1920x1080
+xrandr --outout Virtual-1 --mode 1920x1080
 
 # Set keyboard mapping
 #setxkbmap de
@@ -29,10 +29,10 @@ xfce4-power-manager &
 dunst &
 
 # Launch polybar
-~/dotfiles/polybar/launch.sh &
+~/install/polybar/launch.sh &
 
 # Setup Wallpaper and update colors
-~/dotfiles/scripts/updatewal.sh &
+~/install/scripts/updatewal.sh &
 
 # Load Windows 11 VM
 # virsh --connect qemu:///system start win11

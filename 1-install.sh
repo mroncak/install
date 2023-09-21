@@ -99,6 +99,7 @@ Include = /etc/pacman.d/arcolinux-mirrorlist
 SigLevel = PackageRequired DatabaseNever
 Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
 
+sudo pacman -Sy
 
 # ------------------------------------------------------
 # Install required packages
@@ -193,7 +194,7 @@ clear
 echo ""
 echo "-> Install .bashrc"
 
-_installSymLink .bashrc ~/.bashrc ~/dotfiles/.bashrc ~/.bashrc
+_installSymLink .bashrc ~/.bashrc ~/install/.bashrc ~/.bashrc
 
 # ------------------------------------------------------
 # Install custom issue (login prompt)
@@ -237,7 +238,7 @@ while true; do
             else
                 mkdir ~/wallpaper
             fi
-            cp ~/dotfiles/default.jpg ~/wallpaper
+            cp ~/install/default.jpg ~/wallpaper
             echo "Default wallpaper installed."
         break;;
         * ) echo "Please answer yes or no.";;
@@ -249,7 +250,7 @@ done
 # ------------------------------------------------------
 echo ""
 echo "-> Init pywal"
-wal -i ~/dotfiles/default.jpg
+wal -i ~/install/default.jpg
 echo "pywal initiated."
 
 # ------------------------------------------------------

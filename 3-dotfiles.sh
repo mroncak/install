@@ -70,44 +70,44 @@ echo "-> Install general dotfiles"
 echo "-------------------------------------"
 echo ""
 
-_installSymLink alacritty ~/.config/alacritty ~/dotfiles/alacritty/ ~/.config
-_installSymLink ranger ~/.config/ranger ~/dotfiles/ranger/ ~/.config
-_installSymLink vim ~/.config/vim ~/dotfiles/vim/ ~/.config
-_installSymLink nvim ~/.config/nvim ~/dotfiles/nvim/ ~/.config
-_installSymLink starship ~/.config/starship.toml ~/dotfiles/starship/starship.toml ~/.config/starship.toml
-_installSymLink rofi ~/.config/rofi ~/dotfiles/rofi/ ~/.config
-_installSymLink dunst ~/.config/dunst ~/dotfiles/dunst/ ~/.config
-_installSymLink wal ~/.config/wal ~/dotfiles/wal/ ~/.config
+_installSymLink alacritty ~/.config/alacritty ~/install/alacritty/ ~/.config
+_installSymLink ranger ~/.config/ranger ~/install/ranger/ ~/.config
+_installSymLink vim ~/.config/vim ~/install/vim/ ~/.config
+_installSymLink nvim ~/.config/nvim ~/install/nvim/ ~/.config
+_installSymLink starship ~/.config/starship.toml ~/install/starship/starship.toml ~/.config/starship.toml
+_installSymLink rofi ~/.config/rofi ~/install/rofi/ ~/.config
+_installSymLink dunst ~/.config/dunst ~/install/dunst/ ~/.config
+_installSymLink wal ~/.config/wal ~/install/wal/ ~/.config
 
 echo "-------------------------------------"
 echo "-> Install GTK dotfiles"
 echo "-------------------------------------"
 echo ""
 
-_installSymLink .gtkrc-2.0 ~/.gtkrc-2.0 ~/dotfiles/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
-_installSymLink gtk-3.0 ~/.config/gtk-3.0 ~/dotfiles/gtk/gtk-3.0/ ~/.config/
-_installSymLink .Xresouces ~/.Xresources ~/dotfiles/gtk/.Xresources ~/.Xresources
-_installSymLink .icons ~/.icons ~/dotfiles/gtk/.icons/ ~/
+_installSymLink .gtkrc-2.0 ~/.gtkrc-2.0 ~/install/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
+_installSymLink gtk-3.0 ~/.config/gtk-3.0 ~/install/gtk/gtk-3.0/ ~/.config/
+_installSymLink .Xresouces ~/.Xresources ~/install/gtk/.Xresources ~/.Xresources
+_installSymLink .icons ~/.icons ~/install/gtk/.icons/ ~/
 
 echo "-------------------------------------"
 echo "-> Install Qtile dotfiles"
 echo "-------------------------------------"
 echo ""
 
-_installSymLink qtile ~/.config/qtile ~/dotfiles/qtile/ ~/.config
-_installSymLink polybar ~/.config/polybar ~/dotfiles/polybar/ ~/.config
-_installSymLink picom ~/.config/picom ~/dotfiles/picom/ ~/.config
-_installSymLink .xinitrc ~/.xinitrc ~/dotfiles/qtile/.xinitrc ~/.xinitrc
+_installSymLink qtile ~/.config/qtile ~/install/qtile/ ~/.config
+_installSymLink polybar ~/.config/polybar ~/install/polybar/ ~/.config
+_installSymLink picom ~/.config/picom ~/install/picom/ ~/.config
+_installSymLink .xinitrc ~/.xinitrc ~/install/qtile/.xinitrc ~/.xinitrc
 
 echo "-------------------------------------"
 echo "-> Install Hyprland dotfiles"
 echo "-------------------------------------"
 echo ""
 
-_installSymLink hypr ~/.config/hypr ~/dotfiles/hypr/ ~/.config
-_installSymLink waybar ~/.config/waybar ~/dotfiles/waybar/ ~/.config
-_installSymLink swaylock ~/.config/swaylock ~/dotfiles/swaylock/ ~/.config
-_installSymLink wlogout ~/.config/wlogout ~/dotfiles/wlogout/ ~/.config
+_installSymLink hypr ~/.config/hypr ~/install/hypr/ ~/.config
+_installSymLink waybar ~/.config/waybar ~/install/waybar/ ~/.config
+_installSymLink swaylock ~/.config/swaylock ~/install/swaylock/ ~/.config
+_installSymLink wlogout ~/.config/wlogout ~/install/wlogout/ ~/.config
 
 # ------------------------------------------------------
 # DONE

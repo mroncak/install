@@ -70,6 +70,13 @@ done
 # ------------------------------------------------------
 # Install Arco Repositories
 # ------------------------------------------------------
+
+echo
+echo "Pacman parallel downloads if needed"
+FIND="#ParallelDownloads = 5"
+REPLACE="ParallelDownloads = 5"
+sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
+
 sudo pacman -S wget --noconfirm --needed
 
 echo "Getting the ArcoLinux keys from the ArcoLinux repo"

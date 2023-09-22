@@ -153,36 +153,38 @@ packagesPacman=(
     "virt-viewer"
     "qemu-desktop"
     "qemu-emulators-full"
-    "firewalld"
-    "ntfs-3g"
-    "brave-bin"
-    "freerdp"
-    "keepassxc"
-    "nextcloud-client"
-    "openfortivpn"
-    "timeshift"
-    "timeshift-autosnap"
-    "transmission-gtk"
-    "ranger"
-    "kdeconnect"
-    "gnome-calculator"
-    "spotifywm-git"
+    "firewalld"				# Firewall Daemon - firewall-cmd
+    "ntfs-3g"				# NTFS Filesystem Driver
+    "brave-bin"				# Brave Browser
+    "freerdp"				# RDP Client
+    "keepassxc"				# KeePassXC Password Manager
+    "nextcloud-client"			# Nextcloud Client GUI
+    "openfortivpn"			# Fortigate VPN
+    "timeshift"				# Incremental System Backup
+    "timeshift-autosnap"		# Automatic Incremental System Backup - BRTFS
+    "transmission-gtk"			# Torrent Downloader
+    "ranger"				# CLI File Explorer
+    "kdeconnect"			# Desktop to Phone Connection
+    "gnome-calculator"			# Calculator
+    "spotifywm-git"			# Spotify for adapted for WM
     "bibata-cursor-theme" 
-    "trizen"
-    "pfetch"
-    "yay"
-    "ttf-ms-fonts"
-    "sublime-text-4"
-    "ferdium-bin"
-    "meld"
-    "arandr"
+    "pfetch"				# System Info CLI
+    "yay"				# Yet Another Yogurth - AUR Helper
+    "ttf-ms-fonts"			# Microsoft Fonts
+    "sublime-text-4"			# Text Editor
+    "ferdium-bin"			# Whatsup Electron Wrapper
+    "meld"				# GUI Compare files
+    "arandr"				# Display Settings
+    "cups"				# Printing Server
+    "system-config-printer"		# Printer GUI Setup
 );
 
 packagesYay=(
 #    "pfetch" 
 #    "bibata-cursor-theme" 
 #    "trizen"
-    "microsoft-edge-stable-bin"
+    "microsoft-edge-stable-bin"		# Microsoft Edge Browser
+    "xerox-phaser-3020"			# Xerox Workstation 3215 driver
 );
   
 # ------------------------------------------------------

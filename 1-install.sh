@@ -150,6 +150,7 @@ packagesPacman=(
     "arcolinux-app-glade-git"
     "onlyoffice-bin"
     "virt-manager"
+    "virt-viewer"
     "qemu-desktop"
     "qemu-emulators-full"
     "firewalld"
@@ -170,19 +171,25 @@ packagesPacman=(
     "trizen"
     "pfetch"
     "yay"
+    "ttf-ms-fonts"
+    "sublime-text-4"
+    "ferdium-bin"
+    "meld"
+    "arandr"
 );
 
-#packagesYay=(
+packagesYay=(
 #    "pfetch" 
 #    "bibata-cursor-theme" 
 #    "trizen"
-#);
+    "microsoft-edge-stable-bin"
+);
   
 # ------------------------------------------------------
 # Install required packages
 # ------------------------------------------------------
 _installPackagesPacman "${packagesPacman[@]}";
-#_installPackagesYay "${packagesYay[@]}";
+_installPackagesYay "${packagesYay[@]}";
 
 # ------------------------------------------------------
 # Install pywal

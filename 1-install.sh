@@ -68,27 +68,45 @@ while true; do
 done
 
 # ------------------------------------------------------
-# Install Arco Repositories
+# Setup Pacman Parallel Downloads
 # ------------------------------------------------------
 
 echo
 echo "Pacman parallel downloads if needed"
-FIND="#ParallelDownloads = 5"
-REPLACE="ParallelDownloads = 5"
-sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
+while true; do
+    read -p "Do you want to add parallel pacman downloads? (Yy/Nn): " yn
+    case $yn in
+        [Yy]* )
+	       FIND="#ParallelDownloads = 5"
+            REPLACE="ParallelDownloads = 5"
+            sudo sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
+            echo "Pacman parallel downloads done."
+            break;;
+        [Nn]* ) 
+            echo "Pacman parallel downloads skipped."
+        break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
-sudo pacman -S wget --noconfirm --needed
+# ------------------------------------------------------
+# Install ArcoLinux Repositories
+# ------------------------------------------------------
 
-echo "Getting the ArcoLinux keys from the ArcoLinux repo"
-
-sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-keyring-20251209-3-any.pkg.tar.zst -O /tmp/arcolinux-keyring-20251209-3-any.pkg.tar.zst
-sudo pacman -U --noconfirm --needed /tmp/arcolinux-keyring-20251209-3-any.pkg.tar.zst
-
-echo "Getting the latest arcolinux mirrors file"
-
-sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst -O /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
-sudo pacman -U --noconfirm --needed /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
-echo '
+echo
+echo "Install ArcoLinux Repositories"
+while true; do
+    read -p "Do you want to add ArcoLinux Repositories? (Yy/Nn): " yn
+    case $yn in
+        [Yy]* )
+            sudo pacman -S wget --noconfirm --needed
+            echo "Getting the ArcoLinux keys from the ArcoLinux repo"
+            sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-keyring-20251209-3-any.pkg.tar.zst -O /tmp/arcolinux-keyring-20251209-3-any.pkg.tar.zst
+            sudo pacman -U --noconfirm --needed /tmp/arcolinux-keyring-20251209-3-any.pkg.tar.zst
+            echo "Getting the latest arcolinux mirrors file"
+            sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst -O /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
+            sudo pacman -U --noconfirm --needed /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
+            echo '
 
 #[arcolinux_repo_testing]
 #SigLevel = PackageRequired DatabaseNever
@@ -105,8 +123,15 @@ Include = /etc/pacman.d/arcolinux-mirrorlist
 [arcolinux_repo_xlarge]
 SigLevel = PackageRequired DatabaseNever
 Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
-
-sudo pacman -Sy
+            sudo pacman -Sy
+            echo "ArcoLinux Repositories Installed."
+        break;;
+        [Nn]* ) 
+            echo "ArcoLinux Repositories skipped."
+        break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 read -p "Press enter to continue"
 

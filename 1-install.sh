@@ -174,7 +174,6 @@ packagesPacman=(
     "yay"				# Yet Another Yogurth - AUR Helper
     "ttf-ms-fonts"			# Microsoft Fonts
     "sublime-text-4"			# Text Editor
-    "ferdium-bin"			# Whatsup Electron Wrapper
     "meld"				# GUI Compare files
     "arandr"				# Display Settings
     "cups"				# Printing Server
@@ -187,6 +186,7 @@ packagesYay=(
 #    "trizen"
     "microsoft-edge-stable-bin"		# Microsoft Edge Browser
     "xerox-phaser-3020"			# Xerox Workstation 3215 driver
+    "ferdium-bin"			# Whatsup Electron Wrapper
 );
   
 # ------------------------------------------------------

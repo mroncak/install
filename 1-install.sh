@@ -117,44 +117,43 @@ echo ""
 echo "-> Install main packages"
 
 packagesPacman=(
-    "pacman-contrib"
-    "alacritty" 
-    "rofi" 
-    "chromium" 
-    "nitrogen" 
-    "dunst" 
-    "starship"
-    "neovim" 
-    "mpv" 
-    "freerdp" 
-    "xfce4-power-manager" 
-    "thunar" 
-    "mousepad" 
+    "pacman-contrib"			# Contributed scripts and tools for pacman systems
+    "alacritty" 			# A cross-platform, GPU-accelerated terminal emulator
+    "rofi" 				# A window switcher, application launcher and dmenu replacement
+    "chromium" 				# Internet Browser
+    "nitrogen" 				# Background browser and setter for X windows
+    "dunst" 				# Customizable and lightweight notification-daemon
+    "starship"				# The cross-shell prompt for astronauts
+    "neovim" 				# Text Editor
+    "mpv" 				# Media Player
+    "freerdp" 				# RDP Client
+    "xfce4-power-manager" 		# Power Manager
+    "thunar" 				# File Manager
     "ttf-font-awesome" 
     "ttf-fira-sans" 
     "ttf-fira-code" 
     "ttf-firacode-nerd" 
-    "figlet" 
-    "lxappearance" 
-    "breeze" 
-    "breeze-gtk" 
-    "vlc" 
-    "exa" 
+    "figlet" 				# A program for making large letters out of ordinary text
+    "lxappearance" 			# Feature-rich GTK+ theme switcher of the LXDE Desktop
+    "breeze" 				# Artwork, styles and assets for the Breeze visual style for the Plasma Desktop
+    "breeze-gtk" 			# Breeze widget theme for GTK 2 and 3 for the Plasma Desktop
+    "vlc" 				# Media Player
+    "eza"				# A modern replacement for ls (community fork of exa) 
     "python-pip" 
     "python-psutil" 
     "python-rich" 
     "python-click" 
-    "xdg-desktop-portal-gtk"
-    "pavucontrol" 
-    "tumbler" 
-    "xautolock" 
-    "blueman"
-    "arcolinux-app-glade-git"
-    "onlyoffice-bin"
-    "virt-manager"
-    "virt-viewer"
-    "qemu-desktop"
-    "qemu-emulators-full"
+    "xdg-desktop-portal-gtk"		# A backend implementation for xdg-desktop-portal using GTK
+    "pavucontrol" 			# Pulseaudio Volume Control
+    "tumbler" 				# Thumbnail Service
+    "xautolock" 			# Automatic X Screen Lock
+    "blueman"				# GTK+ Bluetooth Manager
+    "arcolinux-app-glade-git"		# Arcolinux Template App - ISO maker
+    "onlyoffice-bin"			# Only Office
+    "virt-manager"			# KVM Frontend
+    "virt-viewer"			# Spice Viewer
+    "qemu-desktop"			# Qemu Setup for Desktop Enviroment
+    "qemu-emulators-full"		# Qemu User Mode and System Emulators
     "firewalld"				# Firewall Daemon - firewall-cmd
     "ntfs-3g"				# NTFS Filesystem Driver
     "brave-bin"				# Brave Browser
@@ -182,7 +181,6 @@ packagesPacman=(
 
 packagesYay=(
 #    "pfetch" 
-#    "bibata-cursor-theme" 
 #    "trizen"
     "microsoft-edge-stable-bin"		# Microsoft Edge Browser
     "xerox-phaser-3020"			# Xerox Workstation 3215 driver

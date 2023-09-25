@@ -143,6 +143,7 @@ echo "-> Install main packages"
 
 packagesPacman=(
     "pacman-contrib"			# Contributed scripts and tools for pacman systems
+    "fish"                  # Smart and user friendly shell intended mostly for interactive use
     "alacritty" 			# A cross-platform, GPU-accelerated terminal emulator
     "rofi" 				# A window switcher, application launcher and dmenu replacement
     "chromium" 				# Internet Browser
@@ -238,6 +239,14 @@ echo ""
 echo "-> Install .bashrc"
 
 _installSymLink .bashrc ~/.bashrc ~/install/.bashrc ~/.bashrc
+
+# ------------------------------------------------------
+# Install fish.config
+# ------------------------------------------------------
+echo ""
+echo "-> Install fish.config"
+
+_installSymLink fish.config ~/.config/fish/fish.config ~/install/.config/fish/fish.config ~/.config/fish
 
 # ------------------------------------------------------
 # Install custom issue (login prompt)

@@ -108,6 +108,8 @@ Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.co
 
 sudo pacman -Sy
 
+read -p "Press enter to continue"
+
 # ------------------------------------------------------
 # Install required packages
 # ------------------------------------------------------
@@ -191,7 +193,9 @@ packagesYay=(
 # Install required packages
 # ------------------------------------------------------
 _installPackagesPacman "${packagesPacman[@]}";
+read -p "Press enter to continue"
 _installPackagesYay "${packagesYay[@]}";
+read -p "Press enter to continue"
 
 # ------------------------------------------------------
 # Install pywal

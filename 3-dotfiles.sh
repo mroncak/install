@@ -78,6 +78,7 @@ _installSymLink starship ~/.config/starship.toml ~/install/starship/starship.tom
 _installSymLink rofi ~/.config/rofi ~/install/rofi/ ~/.config
 _installSymLink dunst ~/.config/dunst ~/install/dunst/ ~/.config
 _installSymLink wal ~/.config/wal ~/install/wal/ ~/.config
+_installSymLink thunar ~/.config/thunar ~/install/thunar/ ~/.config
 
 echo "-------------------------------------"
 echo "-> Install GTK dotfiles"

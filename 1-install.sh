@@ -213,6 +213,7 @@ packagesPacman=(
     "unace"                 # Compression
     "unrar"                 # Compression
     "unzip"                 # Compression
+    "catfish"               # Versatile file searching tool
 );
 
 packagesYay=(

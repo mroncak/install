@@ -203,6 +203,16 @@ packagesPacman=(
     "arandr"				# Display Settings
     "cups"				# Printing Server
     "system-config-printer"		# Printer GUI Setup
+    "gnome-firmware"        # Manage firmware on devices supported by fwupd
+    "icedtea-web"           # Additional components for OpenJDK - Browser plug-in and Web Start implementation
+    "aic94xx-firmware"      # Adaptec SAS 44300, 48300, 58300 Sequencer Firmware for AIC94xx driver
+    "wd719x-firmware"       # Driver for Western Digital WD7193, WD7197 and WD7296 SCSI cards
+    "bash-completion"       
+    "gzip"                  # Compression
+    "p7zip"                 # Compression
+    "unace"                 # Compression
+    "unrar"                 # Compression
+    "unzip"                 # Compression
 );
 
 packagesYay=(

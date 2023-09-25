@@ -81,7 +81,7 @@ keys = [
     Key([mod, "shift"], "h", lazy.layout.swap_left()),
     Key([mod, "shift"], "l", lazy.layout.swap_right()),
 
-    Key([mod], "Print", lazy.spawn(home + "/dotfiles/scripts/scrot.sh")),
+    Key([mod], "Print", lazy.spawn(home + "/install/scripts/scrot.sh")),
 
     # Size
     # Key([mod], "h", lazy.layout.shrink(), lazy.layout.decrease_nmaster(), desc='Shrink window (MonadTall)'),
@@ -107,17 +107,17 @@ keys = [
     #System
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.spawn(home + "/dotfiles/scripts/powermenu.sh"), desc="Open Powermenu"),
+    Key([mod, "control"], "q", lazy.spawn(home + "/install/scripts/powermenu.sh"), desc="Open Powermenu"),
     
     # Apps
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod, "control"], "Return", lazy.spawn(home + "/dotfiles/scripts/applauncher.sh"), desc="Launch Rofi"),
+    Key([mod, "control"], "Return", lazy.spawn(home + "/install/scripts/applauncher.sh"), desc="Launch Rofi"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch Browser"),
-    Key([mod, "control"], "b", lazy.spawn(home + "/dotfiles/scripts/bravebookmarks.sh"), desc="Rofi Brave Bookmarks"),
-    Key([mod], "v", lazy.spawn(home + "/dotfiles/scripts/looking-glass.sh"), desc="Start Looking Glass Client"),
-    Key([mod, "shift"], "w", lazy.spawn(home + "/dotfiles/scripts/updatewal.sh"), desc="Update Theme and Wallpaper"),
-    Key([mod, "control"], "w", lazy.spawn(home + "/dotfiles/scripts/wallpaper.sh"), desc="Select Theme and Wallpaper"),
-    Key([mod, "control"], "t", lazy.spawn(home + "/dotfiles/scripts/templates.sh"), desc="Select Tempate and copy to clipboard"),
+    Key([mod, "control"], "b", lazy.spawn(home + "/install/scripts/bravebookmarks.sh"), desc="Rofi Brave Bookmarks"),
+    Key([mod], "v", lazy.spawn(home + "/install/scripts/looking-glass.sh"), desc="Start Looking Glass Client"),
+    Key([mod, "shift"], "w", lazy.spawn(home + "/install/scripts/updatewal.sh"), desc="Update Theme and Wallpaper"),
+    Key([mod, "control"], "w", lazy.spawn(home + "/install/scripts/wallpaper.sh"), desc="Select Theme and Wallpaper"),
+    Key([mod, "control"], "t", lazy.spawn(home + "/install/scripts/templates.sh"), desc="Select Tempate and copy to clipboard"),
 #    Key([], 'F10', lazy.spawn("brave --app=https://chat.openai.com"), desc="Open ChatGPT")
 ]
 

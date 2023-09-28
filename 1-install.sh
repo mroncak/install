@@ -257,7 +257,7 @@ _installSymLink .bashrc ~/.bashrc ~/install/.bashrc ~/.bashrc
 echo ""
 echo "-> Install fish.config"
 
-_installSymLink fish.config ~/.config/fish/fish.config ~/install/.config/fish/fish.config ~/.config/fish
+_installSymLink fish ~/.config/fish ~/install/fish/ ~/.config
 
 # ------------------------------------------------------
 # Install custom issue (login prompt)

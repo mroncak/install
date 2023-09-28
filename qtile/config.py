@@ -56,6 +56,7 @@ platform = int(os.popen("cat /sys/class/dmi/id/chassis_type").read())
 
 # terminal = guess_terminal(terminal)
 browser = "brave"
+#browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder"
 
 # --------------------------------------------------------
 # Keybindings
@@ -64,61 +65,74 @@ mod = "mod4"
 
 keys = [
 
-    # Focus
-    Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window around"),
-    
-    # Move
-    Key([mod, "shift"], "Left", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
+    # Switch between windows in current stack pane
+    Key([mod], "Down", lazy.layout.down()),
+    Key([mod], "Up", lazy.layout.up()),
+    Key([mod], "Left", lazy.layout.left()),
+    Key([mod], "Right", lazy.layout.right()),
 
-    # Swap
-    Key([mod, "shift"], "h", lazy.layout.swap_left()),
-    Key([mod, "shift"], "l", lazy.layout.swap_right()),
+    # Change window sizes (MonadTall)
+    Key([mod, "shift"], "Right", lazy.layout.grow()),
+    Key([mod, "shift"], "Left", lazy.layout.shrink()),
+
+    # Toggle floating
+    Key([mod, "shift"], "c", lazy.window.toggle_floating()),
+    # Toggle Window Max
+    Key([mod, "shift"], "x", lazy.window.toggle_fullscreen()),
+
+    # Move windows up or down in current stack
+    Key([mod, "shift"], "Down", lazy.layout.shuffle_down()),
+    Key([mod, "shift"], "Up", lazy.layout.shuffle_up()),
+
+    # Toggle between different layouts as defined below
+    Key([mod], "Tab", lazy.next_layout()),
+
+    # Switch focus of monitors
+    Key([mod], "period", lazy.next_screen()),
+    Key([mod], "comma", lazy.prev_screen()),
 
     Key([mod], "Print", lazy.spawn(home + "/install/scripts/scrot.sh")),
 
-    # Size
-    # Key([mod], "h", lazy.layout.shrink(), lazy.layout.decrease_nmaster(), desc='Shrink window (MonadTall)'),
-    # Key([mod], "l", lazy.layout.grow(), lazy.layout.increase_nmaster(), desc='Expand window (MonadTall)'),
-    Key([mod, "control"], "Down", lazy.layout.shrink(), desc="Grow window to the left"),
-    Key([mod, "control"], "Up", lazy.layout.grow(), desc="Grow window to the right"),
-    # Key([mod, "control"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
-    # Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
-
-    # Floating
-    Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
-    
-    # Split
-    Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack"),
-
-    # Toggle Layouts
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-
-    # Fullscreen
-    Key([mod], "f", lazy.window.toggle_fullscreen()),
-
     #System
-    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.spawn(home + "/install/scripts/powermenu.sh"), desc="Open Powermenu"),
-    
+    #Key([mod, "control"], "s", lazy.spawn("rofi -show p -modi p:.config/rofi/rofi-power-menu/rofi-power-menu"), desc="Rofi Power Menu"),
+    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Change Keyboard Layout"),
+    Key([mod, "control"], "o", lazy.spawn("sh sony_to_a2dp.sh"), desc="Change the Sony WH-1000XM4 profile to HIFI"),
+    Key([mod, "control"], "p", lazy.spawn("sh sony_to_headset.sh"), desc="Change the Sony WH-1000XM4 profile to Headset"),    
+
     # Apps
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod, "control"], "Return", lazy.spawn(home + "/install/scripts/applauncher.sh"), desc="Launch Rofi"),
+    Key([mod], "r", lazy.spawn(home + "/install/scripts/applauncher.sh"), desc="Launch Rofi"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch Browser"),
     Key([mod, "control"], "b", lazy.spawn(home + "/install/scripts/bravebookmarks.sh"), desc="Rofi Brave Bookmarks"),
-    Key([mod], "v", lazy.spawn(home + "/install/scripts/looking-glass.sh"), desc="Start Looking Glass Client"),
-    Key([mod, "shift"], "w", lazy.spawn(home + "/install/scripts/updatewal.sh"), desc="Update Theme and Wallpaper"),
-    Key([mod, "control"], "w", lazy.spawn(home + "/install/scripts/wallpaper.sh"), desc="Select Theme and Wallpaper"),
+    Key([mod, "shift"], "z", lazy.spawn(home + "/install/scripts/updatewal.sh"), desc="Update Theme and Wallpaper"),
+    Key([mod, "control"], "z", lazy.spawn(home + "/install/scripts/wallpaper.sh"), desc="Select Theme and Wallpaper"),
     Key([mod, "control"], "t", lazy.spawn(home + "/install/scripts/templates.sh"), desc="Select Tempate and copy to clipboard"),
-#    Key([], 'F10', lazy.spawn("brave --app=https://chat.openai.com"), desc="Open ChatGPT")
+    Key([mod], "e", lazy.spawn("thunar"), desc="File Explorer"),
+    Key([mod], "t", lazy.spawn("/opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo '--app-url=https://teams.microsoft.com/?clientType=pwa'"), desc="Microsoft Teams App"),
+    Key([mod], "m", lazy.spawn("/opt/microsoft/msedge/microsoft-edge --use-gl=desktop --enable-features=VaapiVideoDecoder --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U"), desc="Microsoft Outlook App"),
+    Key([mod], "n", lazy.spawn("sh rdp_win11"), desc="Windows 11 at Work"),
+    Key([mod], "v", lazy.spawn("sh rdp_win11_nb"), desc="Windows 11 locally"),
+    
+    # VPN
+    Key([mod], "f", lazy.spawn("alacritty -e sudo forti_up"), desc="OpenfortiVPN Connect"),
+    Key([mod, "shift"], "f", lazy.spawn("alacritty -e sudo forti_down"), desc="OpenfortiVPN Kill"),
+    Key([mod], "g", lazy.spawn("alacritty -e wg-quick up wg0"), desc="Wireguard Up"),
+    Key([mod, "shift"], "g", lazy.spawn("alacritty -e wg-quick down wg0"), desc="Wireguard Down"),
+
+    # Display
+    Key([mod, "control"], "h", lazy.spawn("sh xr home"), desc="Xrandr Script at Home"),
+    Key([mod, "control"], "w", lazy.spawn("sh xr work"), desc="Xrandr Script at Work"),
+    Key([mod, "control"], "a", lazy.spawn("sh xr away"), desc="Xrandr Script Notebook"),
+
+    # Hardware Keys
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Lower Volume"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Raise Volume"),
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Mute Audio"),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +3%"), desc="Raise Brightness"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 3%-"), desc="Lower Brightness"),
 ]
 
 # --------------------------------------------------------
@@ -131,6 +145,8 @@ groups = [
     Group("3", layout='monadtall'),
     Group("4", layout='monadtall'),
     Group("5", layout='monadtall'),
+    Group("6", layout='monadtall'),
+    Group("7", layout='monadtall'),
 ]
 
 dgroups_key_binder = simple_key_binder(mod)
@@ -188,19 +204,19 @@ layout_theme = {
 
 layouts = [
     # layout.Columns(),
-    layout.Max(**layout_theme),
+    # layout.Max(**layout_theme),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
     layout.MonadTall(**layout_theme),
-    layout.MonadWide(**layout_theme),
-    layout.RatioTile(**layout_theme),
+    # layout.MonadWide(**layout_theme),
+    # layout.RatioTile(**layout_theme),
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
-    layout.Floating()
+    # layout.Floating()
 ]
 
 # --------------------------------------------------------

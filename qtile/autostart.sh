@@ -13,7 +13,7 @@
 #xrandr --rate 120
 
 # For Virtual Machine 
-xrandr --output Virtual-1 --mode 1920x1080
+# xrandr --output Virtual-1 --mode 1920x1080
 
 # Set keyboard mapping
 #setxkbmap de
@@ -33,6 +33,25 @@ dunst &
 
 # Setup Wallpaper and update colors
 ~/install/scripts/updatewal.sh &
+
+# Polkit
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# systray battery icon
+#cbatticon -u 5 &
+# systray volume
+#pasystray --include-monitors &
+# systray Network Manager Applet
+nm-applet &
+# systray Remmina 
+#remmina -i &
+# bluetooth blueman-applet
+#blueman-applet &
+# Nextcloud Client
+nextcloud &
+# Keepass Tray
+keepassxc &
+# Kde Connect - Phone connection
+kdeconnect-indicator &
 
 # Load Windows 11 VM
 # virsh --connect qemu:///system start win11

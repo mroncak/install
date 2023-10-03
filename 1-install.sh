@@ -143,7 +143,7 @@ echo "-> Install main packages"
 
 packagesPacman=(
     "pacman-contrib"			# Contributed scripts and tools for pacman systems
-    "fish"                  # Smart and user friendly shell intended mostly for interactive use
+    "fish"                  		# Smart and user friendly shell intended mostly for interactive use
     "alacritty" 			# A cross-platform, GPU-accelerated terminal emulator
     "rofi" 				# A window switcher, application launcher and dmenu replacement
     "chromium" 				# Internet Browser
@@ -203,17 +203,17 @@ packagesPacman=(
     "arandr"				# Display Settings
     "cups"				# Printing Server
     "system-config-printer"		# Printer GUI Setup
-    "gnome-firmware"        # Manage firmware on devices supported by fwupd
-    "icedtea-web"           # Additional components for OpenJDK - Browser plug-in and Web Start implementation
-    "aic94xx-firmware"      # Adaptec SAS 44300, 48300, 58300 Sequencer Firmware for AIC94xx driver
-    "wd719x-firmware"       # Driver for Western Digital WD7193, WD7197 and WD7296 SCSI cards
+    "gnome-firmware"        		# Manage firmware on devices supported by fwupd
+    "icedtea-web"           		# Additional components for OpenJDK - Browser plug-in and Web Start implementation
+    "aic94xx-firmware"      		# Adaptec SAS 44300, 48300, 58300 Sequencer Firmware for AIC94xx driver
+    "wd719x-firmware"       		# Driver for Western Digital WD7193, WD7197 and WD7296 SCSI cards
     "bash-completion"       
-    "gzip"                  # Compression
-    "p7zip"                 # Compression
-    "unace"                 # Compression
-    "unrar"                 # Compression
-    "unzip"                 # Compression
-    "catfish"               # Versatile file searching tool
+    "gzip"                  		# Compression
+    "p7zip"                 		# Compression
+    "unace"                 		# Compression
+    "unrar"                 		# Compression
+    "unzip"                 		# Compression
+    "catfish"               		# Versatile file searching tool
 );
 
 packagesYay=(

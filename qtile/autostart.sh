@@ -52,6 +52,9 @@ nextcloud &
 keepassxc &
 # Kde Connect - Phone connection
 kdeconnect-indicator &
+# Play With MPV Server
+play-with-mpv &
+
 
 # Load Windows 11 VM
 # virsh --connect qemu:///system start win11

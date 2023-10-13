@@ -222,6 +222,7 @@ packagesYay=(
     "microsoft-edge-stable-bin"		# Microsoft Edge Browser
     "xerox-phaser-3020"			# Xerox Workstation 3215 driver
     "ferdium-bin"			# Whatsup Electron Wrapper
+    "play-with-mpv"			# Chrome extension and python server that allows you to play videos in webpages with MPV instead
 );
   
 # ------------------------------------------------------

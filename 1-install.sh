@@ -214,6 +214,8 @@ packagesPacman=(
     "unrar"                 		# Compression
     "unzip"                 		# Compression
     "catfish"               		# Versatile file searching tool
+    "libva-mesa-driver"			# VA-API drivers
+    "mesa"				# An open-source implementation of the OpenGL specification
 );
 
 packagesYay=(

@@ -1,0 +1,12 @@
+#/bin/bash
+
+tmp=$(virsh --connect qemu:///system list --all | grep " win11 " | awk -F'  +' '{ print $3}')
+echo "$tmp"
+if [ "$tmp" != "running" ]
+then
+	virsh --connect qemu:///system start win11
+	echo "VM win11 is starting..."
+	sleep 15
+fi	
+xfreerdp -grab-keyboard /v:192.168.122.229 /u:test /p:4THfeather /d: /dynamic-resolution /gfx-h264:avc444 +gfx-progressive /cert:ignore /sec:tls /network:modem /drive:/home/mroncak/Praca/ &
+	echo "Starting xfreerdp now..."

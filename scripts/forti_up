@@ -1,0 +1,3 @@
+#/bin/bash
+
+openfortivpn -c /home/mroncak/.config/openfortivpn/bra-ssl &

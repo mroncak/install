@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+	echo -e "\n$(tput setaf 1)-------------------------------------------------\nNeed at least 1 argument (hostname or IP address)\n-------------------------------------------------
+	$(tput sgr 0)\nUsage:\n\t- sshp hostname|IPaddress (port)\nExamples:\n\t- sshp bender-ubnt-srv 3000\n\t- sshp 192.168.10.1\n"
+	exit
+fi
+
+hostname=$1
+port=$2
+kp_entry=`gawk -F'\t+' 'BEGIN{IGNORECASE=1} {if($2 == "'$hostname'" || $1 == "'$hostname'") print $3}' /etc/hosts`
+
+if [ -z "$kp_entry" ]; then
+	echo -e "\n$(tput setaf 1)-------------------------------------------------\n \"$1\" was not found in /etc/hosts\n-------------------------------------------------
+	$(tput sgr 0)\n"
+	exit
+fi
+	
+
+keepassxc-cli show -s ~/Documents/pass.kdbx "$kp_entry" > ~/.secret
+username=`cat ~/.secret | grep UserName | cut -d " " -f 2`
+pass=`cat ~/.secret | grep Password | cut -d " " -f 2`
+rm ~/.secret
+
+if [ $# -eq 1 ]; then
+	SSHPASS=$pass sshpass -e ssh -o StrictHostKeyChecking=no $username@$hostname
+elif [ $# -eq 2 ]; then	
+	SSHPASS=$pass sshpass -e ssh -p $port -o StrictHostKeyChecking=no $username@$hostname
+fi

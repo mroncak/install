@@ -1,0 +1,3 @@
+#/bin/bash
+
+xfreerdp -grab-keyboard /v:195.20.172.20 /u:"AzureAD\michal.roncak@marlink.com" /p:1THfeather /d: /dynamic-resolution /gfx-h264:avc444 +gfx-progressive /cert:ignore /sec:tls /network:modem /drive:/home/mroncak/Praca/

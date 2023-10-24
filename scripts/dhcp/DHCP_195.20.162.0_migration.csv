@@ -1,0 +1,24 @@
+﻿Client IP Address,Name,Lease Expiration,Type,Unique ID,Description,Network Access Protection,Probation Expiration,Filter Profile
+195.20.162.10,NPI4259CD.unitas.mobsat.local,Reservation (active),DHCP,0010834259cd,Tlaciaren Dominka,Full Access,N/A,None
+195.20.162.11,HP-LJ-M602.unitas.mobsat.local,Reservation (active),DHCP,6cc217277c7f,HP LaserJet 600 M602 OpenSpace,Full Access,N/A,None
+195.20.162.12,CLJ3700.TELENOR.SK,Reservation (inactive),DHCP,0001e6b5bb43,HP Color LaserJet 3700 v Copy room,Full Access,N/A,None
+195.20.162.13,NPIA74EB0.unitas.mobsat.local,Reservation (active),DHCP,98e7f4a74eb0,HP LaserJet M203dw - Marlink Maritime Engineers,Full Access,N/A,None
+195.20.162.14,NPI64558A.unitas.mobsat.local,Reservation (active),DHCP,10e7c664558a,HP LaserJet M203dw,Full Access,N/A,None
+195.20.162.15,NPI22D1B3.unitas.mobsat.local,Reservation (inactive),None,64510622d1b3,Filedaci na prizemi,Full Access,N/A,None
+195.20.162.16,bra-bizhub-c227.unitas.mobsat.local,Reservation (active),DHCP,00206bad4f42,Minolta bizhub C227,Full Access,N/A,None
+195.20.162.17,NPIA76E87.unitas.mobsat.local,Reservation (active),DHCP,98e7f4a76e87,eburcikova printer LJ M203dw,Full Access,N/A,None
+195.20.162.18,NPI5F007F.unitas.mobsat.local,Reservation (active),DHCP,10e7c65f007f,HP  LaserJet M203dw - idobiasova,Full Access,N/A,None
+195.20.162.19,NPIF788C5.unitas.mobsat.local,Reservation (active),DHCP,6c02e0f788c5,HP LaerJet M209dw,Full Access,N/A,None
+195.20.162.21,NPIA31895.unitas.mobsat.local,Reservation (active),DHCP,98e7f4a31895,"Printer of Juraj Baros, 2B02",Full Access,N/A,None
+195.20.162.39,SRV-BRA-SecSys.Unitas.MobSat.local,Reservation (active),DHCP,005056825c63,,Full Access,N/A,None
+195.20.162.48,srv-bra-videosureillance2,Reservation (active),DHCP,2857be95a5f8,Video surveillance IP recorder,Full Access,N/A,None
+195.20.162.49,srv-bra-videosurveillance,Reservation (active),DHCP,c42f90a6ac35,Video Surveillance System IT Office,Full Access,N/A,None
+195.20.162.51,NPI25DF90.unitas.mobsat.local,Reservation (active),DHCP,64510625df90,Tlaciaren mtalcik HPLJM201dw,Full Access,N/A,None
+195.20.162.52,NPIF78880.unitas.mobsat.local,Reservation (active),DHCP,6c02e0f78880,HP LaserJet M209dw,Full Access,N/A,None
+195.20.162.53,bizhubc200.unitas.mobsat.local,Reservation (active),DHCP,001b8b1d107d,Minolta bizhub C200 - farebna kopirka,Full Access,N/A,None
+195.20.162.156,PC-BRA-TV03MO.Unitas.MobSat.local,Reservation (active),DHCP,1803734b7536,,Full Access,N/A,None
+195.20.162.164,PC-BRA-TV02MO.Unitas.MobSat.local,Reservation (active),DHCP,1803734bd0f6,,Full Access,N/A,None
+195.20.162.181,PC-BRA-TV01MO.Unitas.MobSat.local,Reservation (active),DHCP,1803734be224,,Full Access,N/A,None
+195.20.162.188,KMBTD1ADA4.unitas.mobsat.local,Reservation (active),DHCP,000d02d1ada4,Konica Minolta kopirka 3NP,Full Access,N/A,None
+195.20.162.190,kali-bra.unitas.mobsat.local,Reservation (active),DHCP,00505682c4ae,,Full Access,N/A,None
+195.20.162.198,ndr-00.unitas.mobsat.local,Reservation (active),DHCP,002219d3dade,,Full Access,N/A,None

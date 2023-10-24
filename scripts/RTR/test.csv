@@ -1,0 +1,171 @@
+"2402:d00::/32 - APNIC_IPv6, reserved for MSS usage",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600::/36 - IP backbone, AS 5377",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600::/48 - POPs - Loopbacks",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600::/29 - RIPE_IPv6",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:0:400::/56 - Paris TH2",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:0:401::/64 - FR-PTH2-ISP01",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:0:401::1/128 - FR-PTH2-ISP01, Loopback0",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:0:402::/64 - FR-PTH2-ISP02",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:0:402::1/128 - FR-PTH2-ISP01, Loopbacks0",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:1::/48 - POPs - PtPs external",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:2::/48 - POPs - PtPs intra",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:2:400::/54 - Paris TH2",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:2:401::/64 - PtP, ISP01  ISP02, allocation",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:2:401::/127 - ISP01  ISP02",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:2:401::,,,FR-PTH2-ISP01,,,,,,
+2a02:6600:2:401::1,,,FR-PTH2-ISP02,,,,,,
+,,,,,,,,,
+"2a02:6600:3::/48 - POPs - LANs",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:3:400::/56 - Paris TH2",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:3:401::/64 - LAN: RIPE ATLAS ",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:3:401::,,,HSRP,,,,,,
+2a02:6600:3:401::1,,,FR-PTH2-ISP01,,,,,,
+2a02:6600:3:401::2,,,FR-PTH2-ISP02,,,,,,
+2a02:6600:3:401::3,,"RIPE Atlas probe",FR-PTH2-ATLAS,,,,,,
+,,,,,,,,,
+"2a02:6600:2000::/36 - IPv6 reserved for MARLINK MSS  networks",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:2003::/48 - NL-AMS-MARLINK-MSS-IPv6",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:8000::/36 - Customers",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:8800::/40 - Customers PtP links from POPs",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:8804::/48 - Paris TH2",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:8805::/48 - Aussaguel",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000::/36 - Marlink own offices",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000::/48 - Lysaker",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000::/56 - Lysaker Loopbacks",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:1::/64 - Lysaker Loopback1",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:1::1/128 - Lysaker Looback1 IPv6",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:f000:1::1,,NO-LYS-ISP01,NO-LYS-ISP01,,,,,,Loopback0
+,,,,,,,,,
+"2a02:6600:f000:2::/64 - Lysaker Loopback2",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:2::1/128 - Lysaker Looback2 IPv6",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:f000:2::1,,NO-LYS-ISP02,NO-LYS-ISP02,,,,,,Loopback0
+,,,,,,,,,
+"2a02:6600:f000:100::/56 - Lysaker external PtP - reserved",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:200::/56 - Lysaker internal PtP",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:200::/127 - NO-LYS-ISP01-NO-LYS-ISP02 IC",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:f000:200::,,NO-LYS-ISP01,NO-LYS-ISP01,,,,,,GigabitEthernet0/2
+2a02:6600:f000:200::1,,NO-LYS-ISP02,NO-LYS-ISP02,,,,,,GigabitEthernet0/2
+,,,,,,,,,
+"2a02:6600:f000:200::8/125 - NO-LYS-FWC01-NO-LYS-ISP",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:f000:200::9,,NO-LYS-ISP-FTG-ROOT-HSRP,NO-LYS-ISP-FTG-ROOT-HSRP,,,,,"IC to vdom root HSRP",Gi0/1.100
+2a02:6600:f000:200::a,,NO-LYS-ISP01,NO-LYS-ISP01,,,,,,Gi0/1.100
+2a02:6600:f000:200::b,,"NO-LYS-ISP02 ",NO-LYS-ISP02,,,,,,Gi0/1.100
+2a02:6600:f000:200::c,,"NO-LYS-FWC01 ",NO-LYS-FWC01,,,,,,WAN.100
+,,,,,,,,,
+"2a02:6600:f000:300::/56 - Lysaker Backbone LANs",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:310::/64 - Lysaker Server LAN",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:320::/64 - Lysaker PC LAN",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+2a02:6600:f000:320::1,,NO-LYS-FWC01,NO-LYS-FWC01,,,,,"PC LAN",Port3.20
+,,,,,,,,,
+"2a02:6600:f000:330::/64 - Lysaker DMZ",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:340::/64 - Lysaker marlink.in WIFI",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f000:342::/64 - Lysaker marlink.visitors WIFI",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,
+,,,,,,,,,
+"2a02:6600:f001::/48 - Aussaguel LAN",,,,,,,,,
+"ip address","ip state",description,hostname,mac,owner,device,port,note,Interface
+"No hosts",,,,,,,,,

@@ -1,0 +1,17 @@
+192.168.80.10 haos.home
+192.168.80.21 diyless.home
+192.168.50.2 proxmox.home
+192.168.80.2 mikrotik.home
+192.168.21.1 opnsense.home
+192.168.110.10 bender.work
+192.168.110.20 portainer.work
+192.168.80.20 rpi1.home
+192.168.199.1 opnsense.work
+192.168.199.2 proxmox.work
+192.168.199.5 truenas.work
+192.168.80.41 plug1.home
+192.168.50.50 docker-srv
+192.168.80.50 docker-iot
+192.168.110.11 nextcloudpi.work
+192.168.199.3 proxmox-ibm.work
+192.168.110.12 jellyfin.work

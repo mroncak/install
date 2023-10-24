@@ -31,8 +31,8 @@ home = str(Path.home())
 # --------------------------------------------------------
 # Define Bar
 # --------------------------------------------------------
-wm_bar = "polybar"
-# wm_bar = "qtile"
+# wm_bar = "polybar"
+wm_bar = "qtile"
 
 # --------------------------------------------------------
 # Check for VirtualBox
@@ -55,8 +55,8 @@ platform = int(os.popen("cat /sys/class/dmi/id/chassis_type").read())
 # --------------------------------------------------------
 
 # terminal = guess_terminal(terminal)
-browser = "brave"
-#browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder"
+#browser = "brave"
+browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder"
 
 # --------------------------------------------------------
 # Keybindings
@@ -191,8 +191,8 @@ ColorI=(colordict['colors']['color9'])
 # --------------------------------------------------------
 
 layout_theme = { 
-    "border_width": 3,
-    "margin": 15,
+    "border_width": 1,
+    "margin": 4,
     "border_focus": "FFFFFF",
     "border_normal": ColorC,
     "single_border_width": 3
@@ -251,7 +251,6 @@ widget_list = [
         foreground=ColorC,
     ),
     widget.WindowName(),
-    widget.Systray(),
     widget.TextBox(
         text='',
         fontsize=18,
@@ -297,9 +296,10 @@ widget_list = [
     widget.QuickExit(
         default_text=" ",
         fontsize=20,
-        countdown_start=3,
+        countdown_start=5,
         countdown_format="{}"
     ),
+    widget.Systray(),
 ]
 
 if (platform == 3):
@@ -363,7 +363,7 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 auto_fullscreen = True
-focus_on_window_activation = "smart"
+focus_on_window_activation = "urgent"
 reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing

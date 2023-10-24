@@ -47,6 +47,24 @@ while true; do
 done
 
 # ------------------------------------------------------
+# Copy wireguard config to /etc/wireguard/
+# ------------------------------------------------------
+
+while true; do
+    read -p "DO YOU WANT TO COPY WIREGUARD wg0.conf to /etc/wireguard/? (Yy/Nn): " yn
+    case $yn in
+        [Yy]* )
+	    sudo cp ~/install/wireguard/wg0.conf /etc/wireguard/wg0.conf 	
+            echo "Done."
+        break;;
+        [Nn]* ) 
+            exit;
+        break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+# ------------------------------------------------------
 # Create .config folder
 # ------------------------------------------------------
 echo ""

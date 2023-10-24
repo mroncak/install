@@ -1,0 +1,8 @@
+host = 195.20.161.194
+port = 10443
+password= 4THfeather
+username = mroncak-nk
+set-dns = 0
+#trusted-cert = 37efef302216513574242831f44c04c4f9925d190b8113ba4ba9665172b0d00c
+#trusted-cert = e9ab392b2e6f6d98e62291b70feb2221a2e0f7d7e84565edfffca6989ec2286b
+trusted-cert = 37efef302216513574242831f44c04c4f9925d190b8113ba4ba9665172b0d00c

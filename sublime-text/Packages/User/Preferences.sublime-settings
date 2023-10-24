@@ -1,0 +1,13 @@
+{
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	// Set to true to turn spell checking on by default
+	"spell_check": true,
+	"theme": "Default Dark.sublime-theme",
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"dark_color_scheme": "Mariana.sublime-color-scheme",
+	"light_color_scheme": "Celeste.sublime-color-scheme",
+}

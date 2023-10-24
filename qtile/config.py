@@ -56,7 +56,7 @@ platform = int(os.popen("cat /sys/class/dmi/id/chassis_type").read())
 
 # terminal = guess_terminal(terminal)
 browser = "brave"
-#browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder"
+#browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder"
 
 # --------------------------------------------------------
 # Keybindings

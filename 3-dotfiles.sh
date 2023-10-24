@@ -79,6 +79,9 @@ _installSymLink rofi ~/.config/rofi ~/install/rofi/ ~/.config
 _installSymLink dunst ~/.config/dunst ~/install/dunst/ ~/.config
 _installSymLink wal ~/.config/wal ~/install/wal/ ~/.config
 _installSymLink thunar ~/.config/thunar ~/install/thunar/ ~/.config
+_installSymLink transmission ~/.config/transmission/settings.json ~/install/transmission/settings.json ~/.config/transmission/settings.json
+_installSymLink openfortivpn ~/.config/openfortivpn ~/install/openfortivpn/ ~/.config
+_installSymLink sublime-text ~/.config/sublime-text ~/install/sublime-text/ ~/.config
 
 echo "-------------------------------------"
 echo "-> Install GTK dotfiles"

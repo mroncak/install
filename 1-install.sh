@@ -216,6 +216,9 @@ packagesPacman=(
     "catfish"               		# Versatile file searching tool
     "libva-mesa-driver"			# VA-API drivers
     "mesa"				# An open-source implementation of the OpenGL specification
+    "polkit-gnome"			# Legacy polkit authentication agent for GNOME
+    "pasystray"				# PulseAudio system tray (a replacement for padevchooser)
+    "network-manager-applet"		# Applet for managing network connections
 );
 
 packagesYay=(

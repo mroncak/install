@@ -219,6 +219,7 @@ packagesPacman=(
     "polkit-gnome"			# Legacy polkit authentication agent for GNOME
     "pasystray"				# PulseAudio system tray (a replacement for padevchooser)
     "network-manager-applet"		# Applet for managing network connections
+    "visual-studio-code-bin"        # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 );
 
 packagesYay=(

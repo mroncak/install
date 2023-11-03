@@ -29,17 +29,17 @@ xfce4-power-manager &
 dunst &
 
 # Launch polybar
-~/install/polybar/launch.sh &
+#~/install/polybar/launch.sh &
 
 # Setup Wallpaper and update colors
 ~/install/scripts/updatewal.sh &
 
 # Polkit
-#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # systray battery icon
 #cbatticon -u 5 &
 # systray volume
-#pasystray --include-monitors &
+pasystray --include-monitors &
 # systray Network Manager Applet
 nm-applet &
 # systray Remmina 

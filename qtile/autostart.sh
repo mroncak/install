@@ -13,7 +13,10 @@
 #xrandr --rate 120
 
 # For Virtual Machine 
-# xrandr --output Virtual-1 --mode 1920x1080
+
+if [ -n "xrandr --listmonitors | grep Virtual" ]
+	then xrandr --output Virtual-1 --mode 1920x1080
+fi
 
 # Set keyboard mapping
 #setxkbmap de

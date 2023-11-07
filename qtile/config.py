@@ -35,15 +35,6 @@ home = str(Path.home())
 wm_bar = "qtile"
 
 # --------------------------------------------------------
-# Check for VirtualBox
-# --------------------------------------------------------
-
-if (os.path.isfile("/usr/bin/VBoxService")):
-    terminal = "terminator"
-else:
-    terminal = "alacritty"        
-
-# --------------------------------------------------------
 # Check for Desktop/Laptop
 # --------------------------------------------------------
 
@@ -55,8 +46,9 @@ platform = int(os.popen("cat /sys/class/dmi/id/chassis_type").read())
 # --------------------------------------------------------
 
 # terminal = guess_terminal(terminal)
-#browser = "brave"
-browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder"
+terminal = "alacritty"
+browser = "firefox"
+#browser = "brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder"
 
 # --------------------------------------------------------
 # Keybindings
@@ -99,8 +91,8 @@ keys = [
     Key([mod, "control"], "q", lazy.spawn(home + "/install/scripts/powermenu.sh"), desc="Open Powermenu"),
     #Key([mod, "control"], "s", lazy.spawn("rofi -show p -modi p:.config/rofi/rofi-power-menu/rofi-power-menu"), desc="Rofi Power Menu"),
     Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Change Keyboard Layout"),
-    Key([mod, "control"], "o", lazy.spawn("sh sony_to_a2dp"), desc="Change the Sony WH-1000XM4 profile to HIFI"),
-    Key([mod, "control"], "p", lazy.spawn("sh sony_to_headset"), desc="Change the Sony WH-1000XM4 profile to Headset"),    
+    Key([mod, "control"], "o", lazy.spawn(home + "/install/scripts/sony_to_a2dp.sh"), desc="Change the Sony WH-1000XM4 profile to HIFI"),
+    Key([mod, "control"], "p", lazy.spawn(home + "/install/scripts/sony_to_headset.sh"), desc="Change the Sony WH-1000XM4 profile to Headset"),    
 
     # Apps
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
@@ -113,19 +105,19 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar"), desc="File Explorer"),
     Key([mod], "t", lazy.spawn("/opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo '--app-url=https://teams.microsoft.com/?clientType=pwa'"), desc="Microsoft Teams App"),
     Key([mod], "m", lazy.spawn("/opt/microsoft/msedge/microsoft-edge --use-gl=desktop --enable-features=VaapiVideoDecoder --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U"), desc="Microsoft Outlook App"),
-    Key([mod], "n", lazy.spawn("sh rdp_win11"), desc="Windows 11 at Work"),
-    Key([mod], "v", lazy.spawn("sh rdp_win11_nb"), desc="Windows 11 locally"),
+    Key([mod], "n", lazy.spawn(home + "/install/scripts/rdp_win11"), desc="Windows 11 at Work"),
+    Key([mod], "v", lazy.spawn(home + "/install/scripts/sh rdp_win11_nb"), desc="Windows 11 locally"),
     
     # VPN
-    Key([mod], "f", lazy.spawn("alacritty -e sudo forti_up"), desc="OpenfortiVPN Connect"),
-    Key([mod, "shift"], "f", lazy.spawn("alacritty -e sudo forti_down"), desc="OpenfortiVPN Kill"),
+    Key([mod], "f", lazy.spawn("alacritty -e sudo ~/install/scripts/forti_up"), desc="OpenfortiVPN Connect"),
+    Key([mod, "shift"], "f", lazy.spawn("alacritty -e sudo ~/install/scripts/forti_down"), desc="OpenfortiVPN Kill"),
     Key([mod], "g", lazy.spawn("alacritty -e wg-quick up wg0"), desc="Wireguard Up"),
     Key([mod, "shift"], "g", lazy.spawn("alacritty -e wg-quick down wg0"), desc="Wireguard Down"),
 
     # Display
-    Key([mod, "control"], "h", lazy.spawn("sh xr home"), desc="Xrandr Script at Home"),
-    Key([mod, "control"], "w", lazy.spawn("sh xr work"), desc="Xrandr Script at Work"),
-    Key([mod, "control"], "a", lazy.spawn("sh xr away"), desc="Xrandr Script Notebook"),
+    Key([mod, "control"], "h", lazy.spawn(home + "/install/scripts/xr.sh home"), desc="Xrandr Script at Home"),
+    Key([mod, "control"], "w", lazy.spawn(home + "/install/scripts/xr.sh work"), desc="Xrandr Script at Work"),
+    Key([mod, "control"], "a", lazy.spawn(home + "/install/scripts/xr.sh away"), desc="Xrandr Script Notebook"),
 
     # Hardware Keys
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Lower Volume"),
@@ -155,19 +147,19 @@ dgroups_key_binder = simple_key_binder(mod)
 # Scratchpads
 # --------------------------------------------------------
 
-groups.append(ScratchPad("8", [
-    DropDown("chatgpt", "chromium --app=https://chat.openai.com", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
-    DropDown("mousepad", "mousepad", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
-    DropDown("terminal", "alacritty", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
-    DropDown("scrcpy", "scrcpy -d", x=0.8, y=0.05, width=0.15, height=0.6, on_focus_lost_hide=False )
-]))
+#groups.append(ScratchPad("8", [
+#    DropDown("chatgpt", "chromium --app=https://chat.openai.com", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
+#    DropDown("mousepad", "mousepad", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
+#    DropDown("terminal", "alacritty", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
+#    DropDown("scrcpy", "scrcpy -d", x=0.8, y=0.05, width=0.15, height=0.6, on_focus_lost_hide=False )
+#]))
 
-keys.extend([
-    Key([mod], 'F10', lazy.group["8"].dropdown_toggle("chatgpt")),
-    Key([mod], 'F11', lazy.group["8"].dropdown_toggle("mousepad")),
-    Key([mod], 'F12', lazy.group["8"].dropdown_toggle("terminal")),
-    Key([mod], 'F9', lazy.group["8"].dropdown_toggle("scrcpy"))
-])
+#keys.extend([
+#    Key([mod], 'F10', lazy.group["8"].dropdown_toggle("chatgpt")),
+#    Key([mod], 'F11', lazy.group["8"].dropdown_toggle("mousepad")),
+#    Key([mod], 'F12', lazy.group["8"].dropdown_toggle("terminal")),
+#    Key([mod], 'F9', lazy.group["8"].dropdown_toggle("scrcpy"))
+#])
 
 # --------------------------------------------------------
 # Pywal Colors
@@ -293,12 +285,12 @@ widget_list = [
         text='|',
         foreground=ColorC,
     ),
-    widget.QuickExit(
-        default_text=" ",
-        fontsize=20,
-        countdown_start=5,
-        countdown_format="{}"
-    ),
+    #widget.QuickExit(
+    #    default_text=" ",
+    #    fontsize=20,
+    #    countdown_start=5,
+    #    countdown_format="{}"
+    #),
     widget.Systray(),
 ]
 
@@ -317,7 +309,7 @@ else:
             top=bar.Bar(
     		widget_list,
                 24,
-                opacity=0.7,
+                opacity=1,
                 border_width=[3, 0, 3, 0],
                 margin=[0,0,0,0]
             ),

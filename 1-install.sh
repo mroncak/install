@@ -188,6 +188,7 @@ packagesPacman=(
     "keepassxc"				# KeePassXC Password Manager
     "nextcloud-client"			# Nextcloud Client GUI
     "openfortivpn"			# Fortigate VPN
+    "wireguard-tools"			# Next generation secure network tunnel - tools for configuration
     "timeshift"				# Incremental System Backup
     "timeshift-autosnap"		# Automatic Incremental System Backup - BRTFS
     "transmission-gtk"			# Torrent Downloader

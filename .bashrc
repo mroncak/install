@@ -8,14 +8,14 @@ PS1='[\u@\h \W]\$ '
 
 # scripts
 alias h='~/install/scripts/h'
-alias hu='~/install/hosts/update_hosts.sh'
-alias sshp='~/install/ssh/sshp'
-alias fortiup='~/install/forti_up'
-alias fortidown='~/install/forti_down'
-alias xr='~/install/xrandr/xr.sh'
-alias rdp_win11='~/install/rdp_win11'
-alias sony_to_a2dp='~/install/sony_to_a2dp.sh'
-alias sony_to_headset='~/install/sony_to_headset.sh'
+alias hu='~/install/scripts/hosts/update_hosts.sh'
+alias sshp='~/install/scripts/ssh/sshp'
+alias fortiup='~/install/scripts/forti_up'
+alias fortidown='~/install/scripts/forti_down'
+alias xr='~/install/scripts/xrandr/xr.sh'
+alias rdp_win11='~/install/scripts/rdp_win11'
+alias sony_to_a2dp='~/install/scripts/sony_to_a2dp.sh'
+alias sony_to_headset='~/install/scripts/sony_to_headset.sh'
 
 # navigation
 alias ..='cd ..'

@@ -183,6 +183,7 @@ packagesPacman=(
     "firewalld"				# Firewall Daemon - firewall-cmd
     "ntfs-3g"				# NTFS Filesystem Driver
     "brave-bin"				# Brave Browser
+    "firefox"				# Firefox Browser
     "freerdp"				# RDP Client
     "keepassxc"				# KeePassXC Password Manager
     "nextcloud-client"			# Nextcloud Client GUI

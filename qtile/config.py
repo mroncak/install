@@ -88,8 +88,8 @@ keys = [
     #System
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.spawn(home + "/.config/rofi/powermenu/powermenu.sh"), desc="Open Powermenu"),
-    #Key([mod, "control"], "s", lazy.spawn("rofi -show p -modi p:.config/rofi/rofi-power-menu/rofi-power-menu"), desc="Rofi Power Menu"),
+    #Key([mod, "control"], "q", lazy.spawn(home + "/.config/rofi/powermenu/powermenu.sh"), desc="Open Powermenu"),
+    Key([mod, "control"], "s", lazy.spawn("rofi -show p -modi p:.config/rofi/rofi-power-menu/rofi-power-menu"), desc="Rofi Power Menu"),
     Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Change Keyboard Layout"),
     Key([mod, "control"], "o", lazy.spawn(home + "/install/scripts/sony_to_a2dp.sh"), desc="Change the Sony WH-1000XM4 profile to HIFI"),
     Key([mod, "control"], "p", lazy.spawn(home + "/install/scripts/sony_to_headset.sh"), desc="Change the Sony WH-1000XM4 profile to Headset"),    

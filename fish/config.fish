@@ -52,15 +52,15 @@ set fish_color_param brcyan
 # -----------------------------------------------------
 
 # scripts
-alias h='~/install/scripts/h'
-alias hu='~/install/scripts/hosts/update_hosts.sh'
-alias sshp='~/install/scripts/ssh/sshp'
-alias fortiup='~/install/scripts/forti_up'
-alias fortidown='~/install/scripts/forti_down'
-alias xr='~/install/scripts/xrandr/xr.sh'
-alias rdp_win11='~/install/scripts/rdp_win11'
-alias sony_to_a2dp='~/install/scripts/sony_to_a2dp.sh'
-alias sony_to_headset='~/install/scripts/sony_to_headset.sh'
+alias h='~/dotfiles/scripts/hosts.sh'
+alias hu='~/dotfiles/scripts/hosts/update_hosts.sh'
+alias sshp='~/dotfiles/scripts/ssh/sshp.sh'
+alias fortiup='~/dotfiles/scripts/forti_up.sh'
+alias fortidown='~/dotfiles/scripts/forti_down.sh'
+alias xr='~/dotfiles/scripts/xrandr/xr.sh'
+alias rdp_win11='~/dotfiles/scripts/rdp_win11.sh'
+alias sony_to_a2dp='~/dotfiles/scripts/sony_to_a2dp.sh'
+alias sony_to_headset='~/dotfiles/scripts/sony_to_headset.sh'
 
 # navigation
 alias ..='cd ..'
